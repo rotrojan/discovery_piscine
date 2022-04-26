@@ -9,53 +9,69 @@
 		<style>
 			body {
 				background-color:pink;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				height: 100%;
 			}
 			h1 {
 				color: white;
 				text-align:center;
 			}
-			figure {
-				text-align: center;
-				display:inline-block;
-				margin-left: 0px;
-				margin-right: 0px;
-			}
 			div {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+			footer {
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+			}
+			footer p {
+				font-family: monospace;
 				text-align: right;
 				font-style: italic;
+				margin: 10px;
 			}
 			p {
 				color: black;
-				font-family: monospace;
-				font-size: 0.6em;
+				font-size: 14px;
+				margin-left: 5vw
 			}
 			hr {
 				border: 1px solid black;
 				margin: -10px;
 			}
+			figure figcaption {
+				display: flex;
+				justify-content: center
+			}
+			figure img {
+				width: 42vw;
+				height: 10vw;
+			}
 		</style>
 	</head>
 
 	<body>
-		<h1>Ma boutique à moi<h1/>
+		<h1>Ma boutique à moi</h1>
+		<div>
 		<figure>
 			<img src="https://m.media-amazon.com/images/S/aplus-media/sc/3d5242dc-6dde-40bb-941c-18638407339f.__CR0,0,600,180_PT0_SX600_V1___.jpg"
-			alt="Crazy factory's logo"
-			height=100
-			width=300>
-			<a href="https://www.crazy-factory.com/fr/"><figcaption>Crazy Factory</figcaption></a>
+			alt="Crazy factory's logo" />
+			<figcaption><a href="https://www.crazy-factory.com/fr/">Crazy Factory</a></figcaption>
 		</figure>
 		<figure>
 			<img src="https://silentworker.fr/wp-content/uploads/2021/11/Silent-worker_texte_uniquement-blanc-250x36.png"
-				alt="Silent Worker's logo"
-				height=100
-				width=300>
-			<a href="https://www.silentworker.fr/"><figcaption>Silent Worker</figcaption></a>
+				alt="Silent Worker's logo" />
+			<figcaption><a href="https://www.silentworker.fr/">Silent Worker</a></figcaption>
 		</figure>
-		<hr/>
-		<div>
-			<p>© rotrojan 2021</p>
 		</div>
+		<footer>
+			<hr />
+			<p>© rotrojan 2021</p>
+		</footer>
 	</body>
 
 </html>
