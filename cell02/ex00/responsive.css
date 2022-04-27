@@ -1,0 +1,22 @@
+body, html {
+	margin: 0px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid black;
+	text-align: center;
+	width: 50vw;
+	height: calc(100vh - 4px);
+}
+
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: cyan;
+}
