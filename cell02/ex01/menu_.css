@@ -1,0 +1,62 @@
+/* https://www.web-eau.net/blog/comment-realiser-un-menu-deroulant-en-css3 */
+
+body {
+	font-family: arial;
+}
+
+h1, h2 {
+	text-align: center;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	padding: 10px;
+	text-decoration: none !important;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+}
+
+nav ul {
+	background-color: cyan;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li {
+	list-style: none;
+	line-height: 40px;
+	float: left;
+	background-color: cyan;
+}
+
+nav ul li a {
+	text-decoration: none;
+}
+
+li a:hover {
+	border-bottom: 1px solid black;
+}
+
+nav ul li ul {
+	display: none;
+	text-align: center;
+}
+nav ul li:hover ul {
+	display: list-item;
+	position: absolute;
+	font-size: 16.8px;
+	margin-left: -10px;
+}
+
+nav ul li:hover ul li {
+	float: none;
+}
