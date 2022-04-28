@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+}
+
+div {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-shadow: 0px 0px 5px black;
+}
+
+.middle_block {
+	background-color: black;
+	height: 10vw;
+}
+
+.background_1 {
+	background-image: url("https://wallpapercave.com/wp/wp9405776.jpg");
+}
+
+.background_2 {
+	background-image: url("https://wallpapercave.com/wp/wp9405785.jpg");
+}
