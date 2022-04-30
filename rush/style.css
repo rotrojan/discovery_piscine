@@ -1,12 +1,22 @@
-body {
-    background-color: darkslateblue;
+html {
+    height: 100vh;
 }
 
-.flex-col {
+body {
+    display: flexbox;
+    background-color: darkslateblue;
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
 
-button {}
+button {
+    background-color: coral;
+    border: none;
+}
