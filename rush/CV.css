@@ -1,143 +1,207 @@
-html{
-
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
     font-family: Helvetica;
-
 }
 
-.navigation{
+.navigation {
     display: flex;
     justify-content: center;
-    position:fixed;
-    background-color:darkslateblue;
+    position: fixed;
+    background-color: darkslateblue;
     width: 100%;
-    height:20px;
-    margin:0;
+    height: 20px;
+    margin: 0;
 }
 
-.navigation:hover{
-    transition-property:height;
+.navigation:hover {
+    transition-property: height;
     transition-duration: 0.2s;
     transition-timing-function: linear;
-    height:100px;
+    height: 100px;
 }
 
-.navigation:hover a{
-    opacity:1;
+.navigation:hover a {
+    opacity: 1;
     font-size: 20px;
     font-weight: bolder;
 }
 
-.navigation a{
-    text-decoration:none;
-    color:white;
+.navigation a {
+    text-decoration: none;
+    color: white;
     opacity: 0;
-
 }
 
-.navigation a:hover{
+.navigation a:hover {
     font-size: 15px;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
 }
 
-.nav_div{
-    width:90%;
-    display:flex;
+.nav_div {
+    width: 90%;
+    display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.about{
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
-    background:url(https://i1.wp.com/www.rocketstem.org/wp-content/uploads/2015/04/008_sombrero_galaxy.jpg) repeat fixed 100%;
+    background: url(https://i1.wp.com/www.rocketstem.org/wp-content/uploads/2015/04/008_sombrero_galaxy.jpg) repeat fixed 100%;
     background-size: cover;
+    background-position: center;
 }
 
-.contact{
-    height: 100vh;
-    background:url(https://scitechdaily.com/images/Cassini-Image-Enceladus-Old-and-New.jpg) repeat fixed 100%;
-    background-size: cover;
+.div_about {
+    height: 25em;
+    width: 60em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5em;
 }
 
-.resume{
+.whoami {
+    color: white;
+    font-size: x-large;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article p {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    text-align: justify;
+    font-size: 1.6em;
+}
+
+.selfie {
+    height: 20em;
+}
+
+.contact {
+    height: 100vh;
+    background: url(https://scitechdaily.com/images/Cassini-Image-Enceladus-Old-and-New.jpg) repeat fixed 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     background-color: black;
-    height:100vh;
+    height: 45em;
 }
 
-.contact_container{
+.text_container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_container {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     z-index: 999;
-    width:90vw;
-    height:90vh;
-    background-color:black;
+    width: 90vw;
+    height: 90vh;
+    background-color: black;
     opacity: 0.5;
-    color:white;
+    color: white;
 }
-.social_media_container{
+
+.social_media_container {
     z-index: 999;
-    width:90vw;
-    height:30vh;
-    background-color:black;
-    color:white;
+    width: 90vw;
+    height: 30vh;
+    background-color: black;
+    color: white;
     display: flex;
     flex-flow: row wrap;
     align-items: self-start;
     justify-content: space-evenly;
 }
 
-.social_meida_wrapper{
-    width:40%;
-    height: 500px;;
+.social_media_wrapper {
+    width: 40%;
+    height: 500px;
+    ;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
 }
 
-.info_container{
-    width:40%;
+.info_container {
+    width: 40%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     background-color: black;
     opacity: 0.8;
 }
-.message_container{
-    width:78vw;
-    height:50vh;
+
+.message_container {
+    width: 78vw;
+    height: 50vh;
     background-color: green;
     display: flex;
     flex-flow: column wrap;
 }
 
-.name_container{
-
+@media screen and (max-width: 900px) {
+    .div_about {
+        padding-top: 1em;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 }
 
-.name_container input{
-    width:50%;
-    height:10vh;
+@media screen and (max-width: 470px) {
+    .div_about {
+        padding-top: 1em;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+}
+
+
+}
+.name_container {}
+.name_container input {
+    width: 50%;
+    height: 10vh;
     background-color: black;
 }
-
-.name_container:nth-child(3){
-    width:90vw;
+.name_container:nth-child(3) {
+    width: 90vw;
 }
-
-#message_container_btn{
+#message_container_btn {
     background: coral;
 }
