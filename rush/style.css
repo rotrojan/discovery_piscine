@@ -1,0 +1,12 @@
+body {
+    background-color: darkslateblue;
+}
+
+.flex-col {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button {}
