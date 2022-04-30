@@ -50,6 +50,11 @@ nav {
     width: 100%;
 }
 
+h1 {
+    color: white;
+    font-size: 3em;
+}
+
 .nav_div {
     width: 90%;
     display: flex;
@@ -105,6 +110,7 @@ article p {
 
 .selfie {
     height: 20em;
+    border-radius: 2em;
 }
 
 #contact {
