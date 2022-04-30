@@ -1,0 +1,27 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+.navigation{
+    display: block;
+    position:sticky;
+    background-color:darkslateblue;
+    width: 100%;
+    height:100px;
+    margin:0;
+}
+
+.navigation a{
+    text-decoration:none;
+    color:white;
+}
+
+.nav_div{
+    display:flex;
+    flex
+}
+.about{
+    background:url(http://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/09/15/Pictures/through-saturn-enceladus-shown-cassini-spacecraft-diving_f2c9695c-99dc-11e7-bef3-183dfba5e438.jpg) repeat fixed 100%;
+    background-size: cover;
+}
