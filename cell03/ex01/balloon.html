@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balloon</title>
+
+    <style>
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+
+    <script>
+        function inflate() {
+            balloon = init_balloon();
+            change_color(1, balloon);
+            if (balloon.offsetWidth <= 410) {
+                balloon.style.width = balloon.offsetWidth + 10 + "px";
+                balloon.style.height = balloon.offsetHeight + 10 + "px";
+            } else {
+                balloon.style.width = "200px";
+                balloon.style.height = "200px";
+            }
+        };
+
+        function deflate() {
+            balloon = init_balloon();
+            change_color(-1, balloon);
+            if (balloon.offsetWidth > 200) {
+                balloon.style.width = balloon.offsetWidth - 5 + "px";
+                balloon.style.height = balloon.offsetHeight - 5 + "px";
+            }
+        };
+
+        function init_balloon() {
+            balloon = document.getElementById("balloon");
+            if (balloon.style.backgroundColor == "")
+                balloon.style.backgroundColor = "red";
+            return (balloon);
+        }
+
+        function change_color(direction, balloon) {
+            colors = ["red", "green", "blue"];
+            let i = 0;
+            while (colors[i] != balloon.style.backgroundColor)
+                ++i;
+            if (direction == -1 && i == 0)
+                i = 3;
+            balloon.style.backgroundColor = colors[(i + direction) % colors.length];
+        }
+    </script>
+</head>
+
+<body>
+    <div id="balloon" onclick="inflate()" onmouseleave="deflate()">
+    </div>
+</body>
+
+</html>
