@@ -317,6 +317,7 @@ h4:before {
     padding: 2%;
 }
 
+
 .navigation:hover .contact_container {
     transition-property: padding-top;
     transition-duration: 2s;
@@ -332,3 +333,76 @@ h4:before {
         text-align: center;
     }
 }
+.backcard{
+    position:absolute;
+    top:0;
+    height:35em;
+    width:50em;
+    background-color: black;
+    color:white;
+    font-size: 1em;
+    display: none;
+    border-radius: 5px;
+}
+.backcard h1{
+    color:coral;
+}
+.backcard_container ul{
+    list-style-type: none;
+    text-align: center;
+    line-height: 1em;
+    font-size: 1em;
+}
+
+.backcard_container li{
+    padding: 5px;
+}
+.card:hover, .card:active{
+    animation: flip 2s;
+    animation-fill-mode: both;
+    backface-visibility: visible;  
+}
+
+.card:hover .backcard{
+    opacity: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    animation: appear 1s;
+    animation-fill-mode: both;
+    transform: rotateY(180deg);
+}
+
+.card:focus .backcard{
+    animation: flip 2s;
+    animation-fill-mode: backwards;
+}
+
+.backcard_container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width:70%;
+}
+
+@keyframes appear{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes flip {
+    0% {
+       transform: rotateY(0);
+       animation-timing-function: ease-out;
+    }
+    50% {
+       transform:translateZ(150px) rotateY(170deg);
+       animation-timing-function: ease-out;
+    }
+    100% {
+       transform:translateZ(150px) rotateY(190deg) ;
+       animation-timing-function: ease-in;
+    }
+ }
