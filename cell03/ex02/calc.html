@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <script>
+        function calculate() {
+            first = document.getElementById("first").value;
+            second = document.getElementById("second").value;
+            first = check(first);
+            second = check(second);
+            operator = document.getElementById("operator").value;
+            if (first < 0 || second < 0) {
+                display("Error :(")
+                return;
+            }
+            if (second == 0 && (operator == "/" || operator == "%")) {
+                display("It’s over 9000!");
+                return;
+            }
+            return (do_the_math(first, second, operator));
+        }
+
+        function do_the_math(first, second, operator) {
+            switch (operator) {
+                case "+":
+                    display(first + second);
+                    break;
+                case "-":
+                    display(first - second);
+                    break;
+                case "*":
+                    display(first * second);
+                    break;
+                case "/":
+                    display(first / second);
+                    break;
+                case "%":
+                    display(first % second);
+                    break;
+            }
+        }
+
+        function check(value) {
+            num = Number(value)
+            if (Number.isInteger(num) == false || num < 0)
+                return (-1);
+            return (num);
+        }
+
+        function display(message) {
+            console.log(message);
+            alert(message);
+        }
+
+        setInterval(function() {
+            alert("Please, use me ...");
+        }, 30000);
+    </script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <input id="first" type="text">
+            <select id="operator">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+                <option>%</option>
+            </select>
+            <input id="second" type="text">
+            <input type="submit" value="Let's calculate !" onclick="calculate()">
+
+        </div>
+    </main>
+</body>
+
+</html>
