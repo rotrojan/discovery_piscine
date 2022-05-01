@@ -39,8 +39,7 @@ body {
 }
 
 .navigation a:hover {
-    text-shadow: rgb(108, 192, 219) 2px 2px 5px;
-    transition: all 0.3s ease-out;
+    color:coral;
 }
 
 nav {
@@ -318,10 +317,13 @@ article {
     width: 10%;
     min-width: 100px;
     background: coral;
-    border: none;
+    border: 2px solid transparent;
     padding: 2%;
 }
 
+#message_container_btn:hover{
+    border: 2px solid white;
+}
 
 .navigation:hover .contact_container {
     transition-property: padding-top;
@@ -342,9 +344,11 @@ article {
     border-radius: 5px;
     transform: rotateY(0);
 }
+
 .backcard h1{
     color:coral;
 }
+
 .backcard_container ul{
     list-style-type: none;
     text-align: center;
@@ -433,6 +437,7 @@ article {
         justify-content: center;   
         width:100%;
         position: inherit;
+        opacity: 0.5;
     }
 
     .card:hover {
@@ -441,9 +446,9 @@ article {
 
     .card:hover .backcard{
         animation: none;
-        opacity: 0.5;
         transform: none;
-        position: inherit;
+        opacity: 0.5;
+        position: relative;
     }
 }
 
