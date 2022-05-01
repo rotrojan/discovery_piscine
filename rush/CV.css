@@ -84,6 +84,10 @@ h1 {
     border-radius: 0.5em;
 }
 
+.div_about h1, .div_about p{
+    color:#bebebe;
+}
+
 .whoami {
     color: white;
     font-size: x-large;
@@ -145,7 +149,8 @@ article {
 
 .selfie {
     height: 20em;
-    border-radius: 2em;
+    width:80%;
+    border-radius: 5px;
 }
 
 #contact {
@@ -325,14 +330,6 @@ article {
     padding-top: 4%;
 }
 
-@media screen and (max-width: 800px) {
-    .experiences {
-        flex-direction: column;
-    }
-    .single_exp h3 {
-        text-align: center;
-    }
-}
 .backcard{
     position:absolute;
     top:0;
@@ -343,6 +340,7 @@ article {
     font-size: 1em;
     display: none;
     border-radius: 5px;
+    transform: rotateY(0);
 }
 .backcard h1{
     color:coral;
@@ -375,7 +373,7 @@ article {
 }
 
 .card:focus .backcard{
-    animation: flip 2s;
+    animation: flip 1s;
     animation-fill-mode: backwards;
 }
 
@@ -389,6 +387,7 @@ article {
 
 @keyframes appear{
     0%{opacity: 0;}
+    50%{opacity: 1;}
     100%{opacity: 1;}
 }
 
@@ -406,3 +405,53 @@ article {
        animation-timing-function: ease-in;
     }
  }
+
+
+@media screen and (max-width: 800px) {
+    .experiences {
+        flex-direction: column;
+    }
+    .single_exp h3 {
+        text-align: center;
+    }
+
+    .about{
+        display: flex;
+        flex-flow: row wrap;
+        width:100%;
+
+    }
+
+    .div_about{
+        width:100%;
+    }
+   
+    .backcard{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;   
+        width:100%;
+        position: inherit;
+    }
+
+    .card:hover {
+        animation: none;
+    }
+
+    .card:hover .backcard{
+        animation: none;
+        opacity: 0.5;
+        transform: none;
+        position: inherit;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .input{
+        width:100%;
+    }
+    .transparent_icon{
+        width:2%;
+    }
+}
