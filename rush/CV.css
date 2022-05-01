@@ -98,14 +98,49 @@ article {
     align-items: center;
 }
 
-article p {
+.experiences {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.single_exp {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.single_exp h3 {
+    width: 80%;
+    color: coral;
+    font-size: 2em;
+    text-decoration: underline;
+    text-align: left;
+    margin: 0;
+}
+
+h4:before {
+    content: "• ";
+}
+
+.single_exp h4 {
+    width: 80%;
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0.5em 0 0;
+}
+
+.single_exp p {
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     text-align: justify;
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
 .selfie {
@@ -287,4 +322,13 @@ article p {
     transition-duration: 2s;
     transition-timing-function: linear;
     padding-top: 4%;
+}
+
+@media screen and (max-width: 800px) {
+    .experiences {
+        flex-direction: column;
+    }
+    .single_exp h3 {
+        text-align: center;
+    }
 }
